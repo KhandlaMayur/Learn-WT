@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        :root{
+            --home:rgb(226, 141, 30);
+            --about:rgb(16, 83, 109);
+            --education:rgb(31, 131, 87);
+            --project:rgb(4, 68, 43);
+            --contact:rgb(11, 55, 92);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .navbar{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .navbar li{
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="navbar">
+            <li style="background-color: var(--home);">Home</li>
+            <li style="background-color: var(--about);">About</li>
+            <li style="background-color: var(--education);">Education</li>
+            <li style="background-color: var(--project);">Project</li>
+            <li style="background-color: var(--contact);">Contact</li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        :root{
+            --home:rgb(226, 141, 30);
+            --about:rgb(16, 83, 109);
+            --education:rgb(31, 131, 87);
+            --project:rgb(4, 68, 43);
+            --contact:rgb(11, 55, 92);
+        }
+        .mayur{
+            display: inline;
+            background-color: rgb(26, 27, 72);
+            color: white;
+            /* height: 300px;
+            width: 300px; */
+            padding: 10px 14px;
+            /* margin: 100px; */
+
+        }
+        .mayur1{
+            background-color: var(--home);
+        }
+        .mayur2{
+            background-color:var(--about) ;
+        }
+        .mayur3{
+            background-color: var(--education);
+        }
+        .mayur4{
+            background-color: var(--project);
+        }
+        .mayur5{
+            background-color: var(--contact);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mayur mayur1">Home</div>
+    <div class="mayur mayur2">About</div>
+    <div class="mayur mayur3">Education</div>
+    <div class="mayur mayur4">Project</div>
+    <div class="mayur mayur5">Contact</div>
+    
+</body>
+</html> -->

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+    <style>
+        @media screen and (max-width: 600px){
+            
+            .container {
+                grid-template-columns: 1fr;
+                column-gap: 0;
+            }
+
+            .box1 {
+                width: 100%;
+            }
+
+            .second {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .window {
+                font-size: 26px;
+                text-align: center;
+            }
+
+        }
+
+        .first {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        h1 {
+            color: gray;
+        }
+
+        .ninja {
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .second {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 320px);
+            /* gap: 40px; */
+            column-gap: 80px;
+            row-gap: 40px;
+            /* border: 2px solid black; */
+            margin: 10px auto;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box1 {
+            height: 170px;
+            width: 350px;
+            background-color: #f2f0ec;
+            /* border: 1px solid black;  */
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .box {
+            height: 20px;
+            width: 150px;
+            background-color: #ffd741;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+
+
+        }
+
+        .x {
+            color: rgb(48, 48, 48);
+            font-size: 10px;
+            margin: 2px 0;
+            text-align: center;
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+
+        }
+
+        .y {
+            color: #393939;
+            font-size: 8px;
+            margin: 0;
+            text-align: center;
+            word-break: break-all;
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+
+        }
+
+        .niga {
+            margin: 0;
+            padding: 0;
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+        }
+
+        .niba {
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+
+
+        }
+
+        .window {
+            font-size: 38px;
+        }
+
+        .logo1 {
+            height: 80px;
+            width: 80px;
+        }
+
+        .line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+
+        }
+
+        .para {
+            color: gray;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Inter, Helvetica, Arial, Lucida, sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="first">
+        <div class="line">
+            <p class="window">Download UltraEdit for Windows</p>
+            <img class="logo1"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLsoygGP_HFixLix5oRfZlPhMNxXuY-PgRHg&s"
+                alt="">
+        </div>
+        <p class="para">Download and try UltraEdit before you buy it! This download</p>
+        <p class="para"> the full Windows version of the text editor.</p>
+        <div class="second">
+            <img class="logo"
+                src="https://static.vecteezy.com/system/resources/thumbnails/008/440/451/small/farm-animal-livestock-circle-badge-logo-free-vector.jpg"
+                alt="Logo">
+            <h1>Download UltraEdit</h1>
+            <h2 class="ninja">v2025.1 (released 2025-12-11) | Latest changes </h2>
+        </div>
+    </div>
+    <main class="container">
+        <div class="box1">
+            <h2 class="niga ">English</h2>
+            <h3 class="niba">Includes all languages</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">8229104849BF308E90B9EA3D5A0D00F26BC69BCE624919F9D0D149C34E578397</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">Deutsch</h2>
+            <h3 class="niba">German</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">93F9D78F734A72578FACDE3771297EF3836F581CEAF99389946BAF8C7C2A5E68</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">Italiano</h2>
+            <h3 class="niba">Italian</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">D0AA410DF60EF36E6E12DB3AF59A9C74A3F9757061E0B20AE503FFA3F124B971</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">Español</h2>
+            <h3 class="niba">Spanish</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">864CA79FBCF39C2F6979978AF218B0CBC8D3EF78B13A94ECB92FCF580DA20189</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">français</h2>
+            <h3 class="niba">French</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">59A849F081036D2A49385E21D3B495DEAF0AE8B2A401F37BC8539B5B7ACE3081</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">Português brasileiro</h2>
+            <h3 class="niba">Brazilian Portuguese</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">115C7D22D5ABB73CB92DC8714FBFA929B1D09EFAA549F672651F9A62D39AD942</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">日本</h2>
+            <h3 class="niba">Japanese</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">A7324C234037A2149B3C86F222AB21F67F18F85BE8997EAEB653F04105BBA650</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">한국어</h2>
+            <h3 class="niba">Korean</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">60C3CE199DE23A70FD36D3AA9340BE101D4C883D9845656DD2B7984B4A9B466A</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">华语</h2>
+            <h3 class="niba">Chinese</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">05A9609C95BD72C8539D7980F8F51BC8D634449A0B8084DF20CF511B195A1AFB</p>
+        </div>
+
+
+        <div class="box1">
+            <h2 class="niga ">華語</h2>
+            <h3 class="niba">Traditional Chinese</h3>
+            <div class="box">
+                <a href="1mb.exe">Download 64-bit</a>
+            </div>
+            <p class="x">SHA256</p>
+            <p class="y">57E6CD3A48C6FAEDC9C2F064FFC7610733464981FAFCB3F1753BF52713D32601</p>
+        </div>
+    </main>
+
+</body>
+
+</html>

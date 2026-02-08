@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        /* This Element Slector Specificity is 1 */
+       h1{
+        color: blue;
+       }
+          /* This class Slector Specificity is 10 */
+       .mayur{
+        color: red;
+       }
+          /* This id Slector Specificity is 100 */
+       #m{
+        color: darkblue;
+       }
+          /* This class Slector Specificity is 10 */
+       .khandla{
+        color: blueviolet;
+        color: darkred !important;
+       }
+          /* This attribute Slector Specificity is 10 */
+       [data-x=a]{
+        color: green;
+       }
+          /* This Element + class Slector Specificity is 1+10=11*/
+       h1.mayur{
+        color: orange;
+       }
+       /* This Element + class Slector + class selector + attributr selector Specificity is 1+10+10
+       10=31*/
+      h1.mayur.khandla[data-x=a]{
+        color: rgb(0, 255, 174);
+      }
+
+    </style>
+    </head>
+<body>
+    <div>
+        <h1 class="mayur khandla " id="m" data-x="a"> Hello  I am Mayur!</h1>
+    </div>
+</body>
+</html>

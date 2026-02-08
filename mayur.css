@@ -1,0 +1,40 @@
+div{
+    color: red;
+    background-color: yellow;
+}
+.m{
+    color: pink;
+    background-color: orange;
+}
+#k{
+    color: darkgreen;
+    background-color: lightblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+div  p {
+    color: blue;
+    font-weight: bold;
+}
+div > p {
+    color: green;
+    font-style: italic;
+    background-color: chocolate ;
+}
+a:visited{
+    color: black;
+}
+a:link{
+    color: green;
+}
+a:active{
+    background-color:red ;
+}
+a:hover{
+    background-color: blue;
+}
+p:first-child{
+    color: green;
+}
