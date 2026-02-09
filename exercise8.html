@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+    <style>
+        .container{
+            background-color: navy;
+            height: 60vh;
+            width: 80vw;
+            position: relative;
+        }
+        .circle{
+            background-color: rgb(195, 99, 21);
+            height: 100px;
+            width:100px;
+            border-radius: 50%;
+            position: absolute;  
+            bottom: 0;
+            left: 0;
+            animation: animatex 3s linear infinite,animatey 3s ease-out infinite alternate;
+        }
+        @keyframes animatex {
+
+            from{
+                left: 0;
+
+            }
+            to{
+                left: 100%;
+
+            }
+            /* 0%{
+                left: 0%;
+                bottom: 0;
+            }
+             10%{
+                bottom: 120px;
+             }
+             20%{
+                 bottom: 0;
+                 left:20%;
+
+             }
+             30%{
+                bottom: 120px;
+                
+             }
+             40%{
+                 bottom: 0;
+                 left:40%;
+                
+             }
+             50%{
+                bottom: 120px;
+                
+             }
+             60%{
+                 bottom: 0;
+                 left:60%;
+                
+             }
+             70%{
+                bottom: 120px;
+                
+             }
+
+             80%{
+                 bottom: 0;
+                 left:80%;
+             }
+             90%{
+                bottom: 120px;
+
+             }
+             100%{
+                left: 90%;
+                bottom: 0;
+             } */
+
+            
+        }
+
+        @keyframes animatey {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+    </div>
+    
+</body>
+</html>
