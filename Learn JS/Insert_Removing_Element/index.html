@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert and Remove Elements</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container red border">
+        <div class="box" style="color: brown;" data-createdby="mayur" data-sponseredby="yash">Hello My name is Mayur
+        </div>
+    </div>
+
+    <script>
+        // let div = document.createElement("div")  
+       
+        // div.innerHTML = " Hello my surname is Khandla <b> Mayur </b>" // to create a new div element and set the inner html of the div element to Hello my surname is Khandla <b> Mayur </b>
+        // div.setAttribute("class","created") // to set the class attribute of the div element to created
+        // // document.querySelector(".container").append(div) // to append the div element as a child of the element with class container
+        // // document.querySelector(".container").before(div)  // to insert the div element before the element with class container
+        // document.querySelector(".container").prepend(div) // to insert the div element at the beginning of the element with class container
+
+        let cont = document.querySelector(".container") // to select the element with class container and assign it to the variable cont
+        // cont.remove() // to remove the element with class container from the document
+
+        // cont.insertAdjacentHTML("beforeend", "<b> Hello Browser </b>") // to insert the html <b> Hello Browser </b> at the end of the element with class container
+
+        // cont.insertAdjacentHTML("afterbegin", "<b> Hello Browser </b>") // to insert the html <b> Hello Browser </b> at the beginning of the element with class container
+
+        // cont.insertAdjacentHTML("afterend", "<b> Hello Browser </b>") // to insert the html <b> Hello Browser </b> after the element with class container
+
+        //  cont.insertAdjacentHTML("beforebegin", "<b> Hello Browser </b>") // to insert the html <b> Hello Browser </b> before the element with class container
+
+//         document.querySelector(".container").classList
+// DOMTokenList(3) ['container', 'red', 'border', value: 'container red border']
+// document.querySelector(".container").classNAme
+// undefined
+// document.querySelector(".container").className
+// 'container red border'
+// document.querySelector(".container").classList.add("mayur")
+// undefined
+// document.querySelector(".container").classList.remove("mayur")
+// undefined
+
+// document.querySelector(".container").classList.toggle("red") // to toggle the class red of the element with class container if the class red is present then it will remove the class red and if the class red is not present then it will add the class red and return true if the class red is added and return false if the class red is removed
+// true
+// document.querySelector(".container").classList.toggle("red")
+// false
+// document.querySelector(".container").classList.toggle("red")
+// true
+
+    </script>
+
+
+    <!-- document.querySelector(".box")  // to select the element with class box
+<div class=​"box">​Hello My name is Mayur​</div> 
+
+document.querySelector(".container")  // to select the element with class container
+<div class=​"container">​…​</div>​
+
+document.querySelector(".box").innerHTML  // to get the inner html of the element with class box not include the element itself
+'Hello My name is Mayur'
+
+document.querySelector(".box").outerHTML // to get the outer html of the element with class box include the element itself
+'<div class="box">Hello My name is Mayur</div>'
+
+document.querySelector(".box").innerText // to get the inner text of the element with class box not include the element itself
+'Hello My name is Mayur'
+
+document.querySelector(".box").outerText  // to get the outer text of the element with class box include the element itself
+'Hello My name is Mayur' 
+
+document.querySelector(".box").nodeName  // to get the node name of the element with class box
+'DIV'
+
+document.querySelector(".box").tagName  // to get the tag name of the element with class box
+'DIV'
+
+ document.querySelector(".box").innerHTML = "Hello Yash" // to change the inner html of the element with class box to
+'Hello Yash'
+
+ document.querySelector(".box").hidden   // to check whether the element with class box is hidden or not
+false
+ document.querySelector(".box").hidden = true // to hide the element with class box
+true
+
+document.querySelector(".box").hasAttribute  // to check whether the element with class box has the attribute or not
+ƒ hasAttribute() { [native code] }
+
+document.querySelector(".box").hasAttribute("style") // to check whether the element with class box has the attribute style or not
+true
+
+document.querySelector(".box").getAttribute("style") // to get the value of the attribute style of the element with class box
+'color: brown;'
+
+document.querySelector(".box").setAttribute("style","display:inline") // to set the value of the attribute style of the element with class box to display:inline
+undefined
+
+ document.querySelector(".box").removeAttribute("style")    //  to remove the attribute style of the element with class box 
+undefined
+
+
+document.designMode ='on'  // to enable the design mode of the document which allows to edit the content of the document directly in the browser without using any code to change the content of the document
+'on'
+
+document.querySelector(".box").dataset  // to get the dataset of the element with class box which is an object that contains all the data attributes of the element with class box
+DOMStringMap {createdby: 'mayur', sponseredby: 'yash'}
+
+-->
+
+
+</body>
+
+</html>
