@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+        body{
+            background-color: rgb(62, 116, 128);
+        }
+        @media screen and (orientation: landscape) {
+            body{
+                border: 2px solid red;
+            }
+            
+        }
+        @media only screen and (max-width:600px){
+            body{
+                background-color: rgb(28, 46, 88);
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }         
+        /* @media not|only mediatype and (Expression){CSS-Code:} */
+
+        .boxes{
+            display: flex;
+        }
+        .box{
+            height: 344px;
+            width: 344px;
+            background-color: rgb(90, 7, 54);
+            margin: 5px;
+            padding: 2px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>Hi My name is Mayur</div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

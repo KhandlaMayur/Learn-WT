@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="..\/css\/Form.css">
+</head>
+<body>
+    <h1>This is Form Of college Student</h1>
+    <form action="backend.php">
+        <label for="name"><strong>Name</strong></label>
+     <div>
+          <input type="text" name="myname" id="name">
+     </div>
+
+        <br>
+        <label for="Role"><strong>Role</strong></label>
+        <div>
+             <input type="text" name="myrole" id="Role">
+        </div>
+        <br>
+        <label for="Email"><strong>Email</strong></label>
+        <div>
+             <input type="email" name="myemail" id="Email">
+        </div>
+        <br>
+        <label for="RollNumer"><strong>RollNumer</strong></label>
+        <div>
+            <input type="numeber" name="myrollnumber" id="RollNumer">
+        </div>
+        <br>
+        <label for="Birthdate"><strong>Birthdate</strong></label>
+        <div>
+             <input type="date" name="birthdate" id="Birthdate">
+        </div>
+        <br>
+        <label for="checkbox"><strong>Are You Eligible?</strong></label>
+        <div>
+            <input type="checkbox" name="mycheckbox" id="checkbox" checked>
+        </div>
+        <br>
+        <label for="Gender"><strong>Gender</strong></label>
+        <div>
+                    Male<input type="radio" name="mygender" id="Gender">
+                    Female<input type="radio" name="mygender" id="Gender">
+                    Other<input type="radio" name="mygender"id="Gender">
+        </div>
+        <br>
+        <label for="text"><strong>Write about YourSelf</strong></label>
+        <div>
+           <textarea name="Mytext" id="text" cols="30" rows="10">
+           </textarea>
+        </div>
+        <br>
+        <label for="branch"><strong>Branch</strong></label>
+        <div>
+            <select name="mybranch" id="branch">
+                <option value="ict">Information and Communication Technology</option>
+                <option value="cse">Computer Science Engineering</option>
+                <option value="mech">Mechanical Engineering</option>
+                <option value="ece">Electrical Engineering</option>
+                <option value="eee">Electronics Engineering</option>
+                <option value="it">Information Technology</option>
+                <option value="che">Chemical Engineering</option>
+                <option value="met">Metallurgical Engineering</option>
+                <option value="ce">Civil Engineering</option>
+                <option value="bio">Biomedical Engineering</option>
+                <option value="arh">Architecture</option>
+                <option value="geo">Geological Engineering</option>
+                <option value="eie">Environmental Engineering</option>
+                <option value="pe">Petroleum Engineering</option>
+                <option value="ind">Industrial Engineering</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit now" id="submit">
+            <input type="reset" value="Reset now" id="reset">
+        </div>
+    
+    </form>
+    
+</body>
+</html>

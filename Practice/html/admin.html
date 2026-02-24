@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Portfolio</title>
+    <link rel="stylesheet" href="..\/css\/admin-styles.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <!-- Header -->
+        <header class="admin-header">
+            <h1>Portfolio Admin Panel</h1>
+            <div class="user-info">
+                <span id="current-user">Welcome, User</span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <!-- Sidebar Navigation -->
+        <nav class="admin-sidebar">
+            <ul>
+                <li><a href="#profile" class="nav-link active" data-section="profile">Profile</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li><a href="#save-all" class="nav-link save-all-btn" data-section="save-all">Save All</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div id="message-container"></div>
+
+            <!-- Profile Section -->
+            <section id="profile-section" class="admin-section active">
+                <h2>Profile Management</h2>
+                <div class="profile-form">
+                    <div class="profile-photo">
+                        <img id="profile-preview" src="..\/assets\/images\/j.jpg" alt="Profile Photo">
+                        <input type="file" id="profile-upload" accept="image/*">
+                        <label for="profile-upload" class="btn btn-secondary">Change Photo</label>
+                    </div>
+                    <div class="profile-details">
+                        <div class="form-group">
+                            <label for="profile-name">Full Name:</label>
+                            <input type="text" id="profile-name" value="Mahek Chotara">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-title">Title:</label>
+                            <input type="text" id="profile-title" value="B.Tech IT Student">
+                        </div>
+                        <button id="save-profile" class="btn btn-primary">Save Profile</button>
+                    </div>
+                </div>
+                
+                <!-- Profile Records -->
+                <div class="records-section">
+                    <h3>Profile Records</h3>
+                    <div id="profile-records" class="records-list"></div>
+                </div>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about-section" class="admin-section">
+                <h2>About Me Management</h2>
+                <div class="form-group">
+                    <label for="about-intro">Introduction:</label>
+                    <textarea id="about-intro" rows="8">Hello! I'm Mahek Chotara, a final-year B.Tech student specializing in Information Technology.
+
+I'm passionate about creating modern websites and applications. I enjoy working with front-end technologies like HTML, CSS, and JavaScript, and I also have hands-on experience with back-end tools such as MySQL and Java.
+
+Throughout my academic journey, I've completed coursework in Python, C++, and DBMS, and participated in several college-level projects. I have a strong interest in software development, UI/UX design, and continuously learning new technologies.
+
+My goal is to become a full-stack developer and contribute to innovative and impactful tech solutions. I'm a dedicated, team-oriented individual who loves solving problems and taking on new challenges.</textarea>
+                </div>
+                <button id="save-about" class="btn btn-primary">Save About</button>
+                
+                <!-- About Records -->
+                <div class="records-section">
+                    <h3>About Records</h3>
+                    <div id="about-records" class="records-list"></div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education-section" class="admin-section">
+                <h2>Education Management</h2>
+                <div class="form-group">
+                    <label for="edu-institution">Institution:</label>
+                    <input type="text" id="edu-institution" value="Marwadi University, Rajkot, Gujarat">
+                </div>
+                <div class="form-group">
+                    <label for="edu-years">Years:</label>
+                    <input type="text" id="edu-years" value="2023 – 2027">
+                </div>
+                <div class="form-group">
+                    <label for="edu-cgpa">CGPA:</label>
+                    <input type="text" id="edu-cgpa" value="8.8 / 10">
+                </div>
+                <div class="form-group">
+                    <label for="edu-subjects">Subjects:</label>
+                    <textarea id="edu-subjects" rows="3">Data Structures, DBMS, Operating Systems, Web Technologies, Computer Networks</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="edu-skills">Skills Developed:</label>
+                    <textarea id="edu-skills" rows="3">Programming (Python, Java, C++), Database Management, Web Development, Problem Solving</textarea>
+                </div>
+                <button id="save-education" class="btn btn-primary">Save Education</button>
+                
+                <!-- Education Records -->
+                <div class="records-section">
+                    <h3>Education Records</h3>
+                    <div id="education-records" class="records-list"></div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects-section" class="admin-section">
+                <h2>Projects Management</h2>
+                <div class="form-group">
+                    <label for="project-title">Project Title:</label>
+                    <input type="text" id="project-title">
+                </div>
+                <div class="form-group">
+                    <label for="project-intro">Project Description:</label>
+                    <textarea id="project-intro" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="project-tech">Technologies Used:</label>
+                    <input type="text" id="project-tech">
+                </div>
+                <div class="form-group">
+                    <label for="project-url">Project URL (optional):</label>
+                    <input type="url" id="project-url">
+                </div>
+                <button id="save-project" class="btn btn-primary">Save Project</button>
+                
+                <!-- Project Records -->
+                <div class="records-section">
+                    <h3>Project Records</h3>
+                    <div id="project-records" class="records-list"></div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact-section" class="admin-section">
+                <h2>Contact Management</h2>
+                <div class="form-group">
+                    <label for="contact-name">Name:</label>
+                    <input type="text" id="contact-name" value="Mahek Chotara">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email:</label>
+                    <input type="email" id="contact-email" value="mahek@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Phone:</label>
+                    <input type="tel" id="contact-phone" value="+91 93134 38948">
+                </div>
+                <div class="form-group">
+                    <label for="contact-location">Location:</label>
+                    <input type="text" id="contact-location" value="Rajkot, Gujarat, India">
+                </div>
+                <div class="form-group">
+                    <label for="contact-linkedin">LinkedIn Profile:</label>
+                    <input type="url" id="contact-linkedin" value="https://www.linkedin.com/in/mahek-chotara-911683328">
+                </div>
+                <button id="save-contact" class="btn btn-primary">Save Contact</button>
+                
+                <!-- Contact Records -->
+                <div class="records-section">
+                    <h3>Contact Records</h3>
+                    <div id="contact-records" class="records-list"></div>
+                </div>
+            </section>
+
+            <!-- Save All Section -->
+            <section id="save-all-section" class="admin-section">
+                <h2>Save All Changes</h2>
+                <p>Click the button below to save all changes to your portfolio and view the updated website.</p>
+                <button id="save-all-changes" class="btn btn-success btn-large">Save All & View Portfolio</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="..\/js\/admin-script.js"></script>
+</body>
+</html>

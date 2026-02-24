@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Portfolio</title>
+    <style>
+        /* ====== GLOBAL STYLES ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom right, #eef2ff, #e0e7ff);
+            color: #1e293b;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        p {
+            color: #334155;
+        }
+
+        section {
+            padding: 6rem 1.5rem 4rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* ====== NAVIGATION ====== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1e293b;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* ====== PROJECTS GRID ====== */
+        #projects .grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: #1e40af;
+        }
+
+        .project-card p {
+            margin-bottom: 0.3rem;
+        }
+
+        .tech {
+            font-size: 0.9rem;
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        /* ====== CONTACT ====== */
+        #contact .contact-info {
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        #contact .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        #contact .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #contact form {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        #contact input,
+        #contact textarea {
+            padding: 0.8rem;
+            border: 1px solid #94a3b8;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        #contact button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        #contact button:hover {
+            background: #1d4ed8;
+        }
+
+        /* ====== IMAGE CIRCLE STYLE ====== */
+        .circle-img img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2563eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* ====== HOME & ABOUT GRIDS ====== */
+        .home-grid, .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about-grid {
+            grid-template-columns: 250px 1fr;
+        }
+
+        /* ====== FOOTER ====== */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #0f172a;
+            color: #94a3b8;
+            margin-top: 2rem;
+        }
+
+        footer h2 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ====== ANIMATIONS ====== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 768px) {
+            .home-grid, .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .circle-img {
+                margin-top: 1rem;
+            }
+        }
+
+        /* Admin Panel Link */
+        .admin-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .admin-link:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" id="logoName">Portfolio</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home">
+        <div class="card home-grid">
+            <div>
+                <h2>Home</h2>
+                <p id="homeIntroText">
+                    Hi, I'm Mahek Chotara, a B.Tech IT student passionate about web development and programming. I like creating clean, responsive designs and building dynamic applications.
+                </p>
+            </div>
+            <div class="circle-img">
+                <img id="homeProfileImage" src="..\/assets\/images\/j.jpg" alt="Profile Photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+        <div class="card about-grid">
+            <div class="circle-img">
+                <img id="aboutProfileImage" src="..\/assets\/images\/j.jpg" alt="Profile Photo">
+            </div>
+            <div>
+                <h2>About Me</h2>
+                <p id="aboutDescriptionText">
+                    Hello! I'm Mahek Chotara, a final-year B.Tech student specializing in Information Technology.<br><br>
+                    I'm passionate about creating modern websites and applications. I enjoy working with front-end technologies like HTML, CSS, and JavaScript, and I also have hands-on experience with back-end tools such as MySQL and Java.<br><br>
+                    Throughout my academic journey, I've completed coursework in Python, C++, and DBMS, and participated in several college-level projects. I have a strong interest in software development, UI/UX design, and continuously learning new technologies.<br><br>
+                    My goal is to become a full-stack developer and contribute to innovative and impactful tech solutions. I'm a dedicated, team-oriented individual who loves solving problems and taking on new challenges.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <div class="card">
+            <h2>Education</h2>
+            <p id="educationText">
+                Marwadi University, Rajkot, Gujarat <br>
+                Year of Study: 2023 – 2027 <br>
+                Current CGPA: 8.8 / 10 <br><br>
+                Subjects: Data Structures, DBMS, Operating Systems, Web Technologies, Computer Networks <br>
+                Skills Developed: Programming (Python, Java, C++), Database Management, Web Development, Problem Solving
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="card">
+            <h2>Projects</h2>
+            <div class="grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="card">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><strong>Name:</strong> <span id="contactName">Mahek Chotara</span></p>
+                <p><strong>Email:</strong> <span id="contactEmail">mahek@example.com</span></p>
+                <p><strong>Phone:</strong> <span id="contactPhone">+91 93134 38948</span></p>
+                <p><strong>Location:</strong> <span id="contactLocation">Rajkot, Gujarat, India</span></p>
+                <p><a href="https://www.linkedin.com/in/mahek-chotara-911683328" target="_blank" id="contactLinkedin">LinkedIn Profile</a></p>
+            </div>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2 id="footerName">Mahek Chotara</h2>
+        <p>© 2025 All Rights Reserved | Portfolio</p>
+    </footer>
+
+    <!-- Admin Panel Link -->
+    <a href="admin.html" class="admin-link">⚙️ Admin Panel</a>
+
+    <script>
+        // Default project data from original code
+        const defaultProjects = [
+            {
+                title: "Reminder Application with Notification",
+                description: "A desktop/mobile app that allows users to set reminders with custom titles, dates, and times. The app sends real-time notifications to remind users of tasks or events.",
+                technologies: "Java, MySQL, JavaFX, Android Studio, Firebase"
+            },
+            {
+                title: "Online Quiz System", 
+                description: "A web-based quiz platform where students can register, attempt timed quizzes, and view their scores. Admin panel included for managing questions and users.",
+                technologies: "PHP, MySQL, HTML, CSS, JavaScript"
+            },
+            {
+                title: "Mini Database Application",
+                description: "A command-line or GUI-based mini database app to manage students' records using Python and SQL.",
+                technologies: "Python, MySQL (DBMS Project)"
+            }
+        ];
+
+        // Load portfolio data from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPortfolioData();
+        });
+
+        function loadPortfolioData() {
+            const savedData = localStorage.getItem('portfolioData');
+            let data = {};
+            
+            if (savedData) {
+                data = JSON.parse(savedData);
+            }
+            
+            // Set default values for first-time visitors
+            if (!data.fullName) data.fullName = "Mahek Chotara";
+            if (!data.homeIntro) data.homeIntro = "Hi, I'm Mahek Chotara, a B.Tech IT student passionate about web development and programming. I like creating clean, responsive designs and building dynamic applications.";
+            if (!data.aboutDescription) data.aboutDescription = "Hello! I'm Mahek Chotara, a final-year B.Tech student specializing in Information Technology.\n\nI'm passionate about creating modern websites and applications. I enjoy working with front-end technologies like HTML, CSS, and JavaScript, and I also have hands-on experience with back-end tools such as MySQL and Java.\n\nThroughout my academic journey, I've completed coursework in Python, C++, and DBMS, and participated in several college-level projects. I have a strong interest in software development, UI/UX design, and continuously learning new technologies.\n\nMy goal is to become a full-stack developer and contribute to innovative and impactful tech solutions. I'm a dedicated, team-oriented individual who loves solving problems and taking on new challenges.";
+            if (!data.universityName) data.universityName = "Marwadi University";
+            if (!data.universityLocation) data.universityLocation = "Rajkot, Gujarat";
+            if (!data.studyPeriod) data.studyPeriod = "2023 – 2027";
+            if (!data.cgpa) data.cgpa = "8.8 / 10";
+            if (!data.subjects) data.subjects = "Data Structures, DBMS, Operating Systems, Web Technologies, Computer Networks";
+            if (!data.skillsDeveloped) data.skillsDeveloped = "Programming (Python, Java, C++), Database Management, Web Development, Problem Solving";
+            if (!data.email) data.email = "mahek@example.com";
+            if (!data.phone) data.phone = "+91 93134 38948";
+            if (!data.location) data.location = "Rajkot, Gujarat, India";
+            if (!data.linkedin) data.linkedin = "https://www.linkedin.com/in/mahek-chotara-911683328";
+            if (!data.profileImage) data.profileImage = "j.jpg";
+            if (!data.projects || data.projects.length === 0) data.projects = defaultProjects;
+            
+            // Update page title and logo
+            document.getElementById('pageTitle').textContent = data.fullName + ' | Portfolio';
+            document.getElementById('logoName').textContent = data.fullName.split(' ')[0];
+            document.getElementById('contactName').textContent = data.fullName;
+            document.getElementById('footerName').textContent = data.fullName;
+            
+            // Update home section
+            document.getElementById('homeIntroText').textContent = data.homeIntro;
+            
+            // Update about section
+            document.getElementById('aboutDescriptionText').innerHTML = data.aboutDescription.replace(/\n/g, '<br>');
+            
+            // Update education section
+            const educationText = `
+                ${data.universityName}, ${data.universityLocation} <br>
+                Year of Study: ${data.studyPeriod} <br>
+                Current CGPA: ${data.cgpa} <br><br>
+                Subjects: ${data.subjects} <br>
+                Skills Developed: ${data.skillsDeveloped}
+            `;
+            document.getElementById('educationText').innerHTML = educationText;
+            
+            // Update contact section
+            document.getElementById('contactEmail').textContent = data.email;
+            document.getElementById('contactPhone').textContent = data.phone;
+            document.getElementById('contactLocation').textContent = data.location;
+            document.getElementById('contactLinkedin').href = data.linkedin;
+            
+            // Update profile images
+            document.getElementById('homeProfileImage').src = data.profileImage;
+            document.getElementById('aboutProfileImage').src = data.profileImage;
+            
+            const projectsGrid = document.getElementById('projectsGrid');
+            projectsGrid.innerHTML = '';
+            
+            data.projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                projectCard.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <p class="tech">Languages/Technologies: ${project.technologies}</p>
+                `;
+                projectsGrid.appendChild(projectCard);
+            });
+        }
+    </script>
+</body>
+</html>
